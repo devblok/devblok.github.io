@@ -3,7 +3,7 @@ title: devblok
 description: "devblok's technical scribbles"
 url: 'https://github.com/devblok'
 baseurl: '/'
-# google_analytics: 'UA-XXXXXX-X'
+google_analytics: 'UA-146163229-1'
 # disqus_shortname: 'your-disqus-name'
 
 author:
