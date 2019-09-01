@@ -67,7 +67,7 @@ func (r *Reader) Read(p []byte) (int, error) {
 	return r.reader.Read(p)
 }
 ```
-I managed to avoid implementing Read myself, by useing a SectionReader from the io package, I expected to write this part myself, but oh well. Getting separate readers for every file in the archive is a very useful touch. I can subtitute files with readers from a memory mapped archive now, allowing for simpler code elsewhere, but code that will perform great for loading things into that game engine. So how well does it actually perform at this point?
+I managed to avoid implementing Read myself, by using a SectionReader from the io package, I expected to write this part myself, so I'm pretty happy about this time save. Getting separate readers for every file in the archive is a very useful touch. I can subtitute files with readers from a memory mapped archive now, allowing for simpler code elsewhere, but code that will perform great for loading things into that game engine. So how well does it actually perform at this point?
 
 ```
 goos: linux
