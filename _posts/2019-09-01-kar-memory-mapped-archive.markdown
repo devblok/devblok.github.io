@@ -78,6 +78,6 @@ BenchmarkReadAllFromMemoryMapped-4           100          12930517 ns/op
 PASS
 ok      github.com/devblok/koru/utility/kar     3.459s
 ```
-Quite clearly, calling Read operations is much more efficient than calling ReadAll. 5ms time to get the file out of the archive and into use (it will be read directly into gpu memory in best cases) is acceptable to me at this time. I will continue working on it as I need to, but that's it for now. A useful IO utility with just a few hundread lines of code!
+Quite clearly, calling Read operations is much more efficient than calling ReadAll. 5ms time to get the file out of the archive and into use (it will be read directly into gpu memory in best cases) is acceptable to me at this time. All that's left now is to make a command line utility to use it. It will be built along with other utilities in the engine. It's the simplest thing ever currently, no concurrent compression or decompression of files so far, merely a 100 lines of code. It also allows me to create testing archives for benchmarks and tests.
 
-
+Overall, I'm quite pleased with this tiny experiment. Go has great standard library facilities, allowing me to extend them the way I want to, easily. With only a few hundread lines of code, I made a useful file format that will serve me well in my game engine, allowing me to stream resources straight out of the archive. Success!
